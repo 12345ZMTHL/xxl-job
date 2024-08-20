@@ -32,7 +32,7 @@ jobs:
    #   run: mvn -B package --file pom.xml
 
     - name: 上传jar包
-      run: sshpass -p ${{secrets.PWD}} scp -r -o StrictHostKeyChecking=no ./pom.xml ./run.sh root@${{secrets.IP}}:/root/GitHub_Action
+      run: sshpass -p ${{secrets.PWD}} scp -r -o StrictHostKeyChecking=no ./pom.xml root@${{secrets.IP}}:/root/GitHub_Action
 
    # - name: 启动项目
    #   run: sshpass -p ${{secrets.REMOTE_PWD}} ssh -o StrictHostKeyChecking=no root@${{secrets.REMOTE_IP}} "cd /root/GitHub_Action && chmod +x run.sh && ./run.sh"
